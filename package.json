@@ -1,0 +1,25 @@
+{
+  "name": "from0",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmsn/from0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmsn/from0/issues"
+  },
+  "homepage": "https://github.com/nmsn/from0#readme",
+  "dependencies": {
+    "babel-standalone": "^6.26.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
