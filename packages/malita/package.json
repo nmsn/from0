@@ -7,8 +7,8 @@
     "malita": "./bin/malita.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "hello": "node ./src/index.js"
+    "build": "pnpm esbuild src/** --bundle --outdir=lib",
+    "dev": "pnpm build -- --watch"
   },
   "keywords": [],
   "author": "",

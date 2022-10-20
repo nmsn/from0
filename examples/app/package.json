@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "malita"
+    "build": "pnpm esbuild src/** --bundle --outdir=www",
+    "dev": "pnpm build --watch",
+    "serve": "cd www && serve"
   },
   "dependencies": {
-    "malita": "workspace:*"
+    "malita": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
 }
