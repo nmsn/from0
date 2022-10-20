@@ -1,13 +1,15 @@
 {
-  "name": "from0",
+  "name": "@examples/app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "malita"
+  },
+  "dependencies": {
+    "malita": "workspace:*"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "private": true
+  "license": "ISC"
 }
