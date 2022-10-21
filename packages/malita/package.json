@@ -7,13 +7,14 @@
     "malita": "./bin/malita.js"
   },
   "scripts": {
-    "build": "pnpm esbuild src/** --bundle --outdir=lib",
-    "dev": "pnpm build -- --watch"
+    "build": "pnpm esbuild src/** --bundle --outdir=lib --platform=node --external:esbuild",
+    "dev": "malita dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "express": "^4.18.2"
   }
 }
