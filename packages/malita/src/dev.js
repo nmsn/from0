@@ -3,6 +3,8 @@
 const express = require("express");
 const { serve, build } = require("esbuild");
 const path = require("path");
+const portfinder = require("portfinder");
+
 const {
   DEFAULT_ENTRY_POINT,
   DEFAULT_OUTDIR,
@@ -15,6 +17,10 @@ const {
 const dev = async () => {
   const cwd = process.cwd();
   const app = express();
+
+  const port = await portfinder.getPortPromise({
+    port: DEFAULT_PORT,
+  });
 
   app.get("/", (_req, res) => {
     res.set("Content-Type", "text/html");
@@ -35,8 +41,8 @@ const dev = async () => {
       </html>`);
   });
 
-  app.listen(DEFAULT_PORT, async () => {
-    console.log(`App listening at http://${DEFAULT_HOST}:${DEFAULT_PORT}`);
+  app.listen(port, async () => {
+    console.log(`App listening at http://${DEFAULT_HOST}:${port}`);
     try {
       const devServe = await serve(
         {
